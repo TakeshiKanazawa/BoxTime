@@ -13,6 +13,7 @@
 		397AD8D7243DBCF0007F21E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 397AD8D5243DBCF0007F21E8 /* Main.storyboard */; };
 		397AD8D9243DBCF5007F21E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 397AD8D8243DBCF5007F21E8 /* Assets.xcassets */; };
 		397AD8DC243DBCF5007F21E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 397AD8DA243DBCF5007F21E8 /* LaunchScreen.storyboard */; };
+		397AD8E624405DA6007F21E8 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397AD8E524405DA5007F21E8 /* SettingViewController.swift */; };
 		FD843CFD37F83CE4AE0F1D7B /* Pods_BoxTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72D014BAC982B28C2A264674 /* Pods_BoxTime.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		397AD8D8243DBCF5007F21E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		397AD8DB243DBCF5007F21E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		397AD8DD243DBCF5007F21E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		397AD8E524405DA5007F21E8 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		72D014BAC982B28C2A264674 /* Pods_BoxTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoxTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6996B5D9A92B069F92A553 /* Pods-BoxTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoxTime.debug.xcconfig"; path = "Target Support Files/Pods-BoxTime/Pods-BoxTime.debug.xcconfig"; sourceTree = "<group>"; };
 		E3F5045F3B6D59C531E13759 /* Pods-BoxTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoxTime.release.xcconfig"; path = "Target Support Files/Pods-BoxTime/Pods-BoxTime.release.xcconfig"; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				397AD8D8243DBCF5007F21E8 /* Assets.xcassets */,
 				397AD8DA243DBCF5007F21E8 /* LaunchScreen.storyboard */,
 				397AD8DD243DBCF5007F21E8 /* Info.plist */,
+				397AD8E524405DA5007F21E8 /* SettingViewController.swift */,
 			);
 			path = BoxTime;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				397AD8D4243DBCF0007F21E8 /* ViewController.swift in Sources */,
 				397AD8D0243DBCF0007F21E8 /* AppDelegate.swift in Sources */,
 				397AD8D2243DBCF0007F21E8 /* SceneDelegate.swift in Sources */,
+				397AD8E624405DA6007F21E8 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
