@@ -7,25 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BoxTime" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1228" y="-290"/>
-        </scene>
         <!--セッティング-->
         <scene sceneID="NSK-mg-vus">
             <objects>
-                <viewController id="lL7-1g-emV" sceneMemberID="viewController">
+                <viewController id="lL7-1g-emV" customClass="SettingViewController" customModule="BoxTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9eP-v3-ABI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,16 +35,71 @@
                     </userDefinedRuntimeAttributes>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="489" y="118"/>
+            <point key="canvasLocation" x="177" y="-113"/>
         </scene>
         <!--タイマー-->
         <scene sceneID="UIT-6C-nQn">
             <objects>
-                <viewController id="V4z-Da-BYH" sceneMemberID="viewController">
+                <viewController id="V4z-Da-BYH" customClass="ViewController" customModule="BoxTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w0z-hk-oTZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RTU-tS-ptt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5k6-W7-zIm">
+                                <rect key="frame" x="19.5" y="125" width="336" height="97"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="81"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AO1-bK-7fb">
+                                <rect key="frame" x="43.5" y="389.5" width="128" height="128"/>
+                                <state key="normal" image="play"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pL-9E-nbM">
+                                <rect key="frame" x="203.5" y="389.5" width="128" height="128"/>
+                                <state key="normal" image="stop"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRP-T2-udk">
+                                <rect key="frame" x="133" y="309.5" width="109.5" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvq-1q-GKK">
+                                <rect key="frame" x="157.5" y="513" width="60" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Reset"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interval" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clh-If-Fcm">
+                                <rect key="frame" x="151" y="279.5" width="73" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rvq-1q-GKK" firstAttribute="centerY" secondItem="w0z-hk-oTZ" secondAttribute="centerY" constant="200" id="3M0-On-jrO"/>
+                            <constraint firstItem="clh-If-Fcm" firstAttribute="centerX" secondItem="w0z-hk-oTZ" secondAttribute="centerX" id="4Gd-9Z-n5U"/>
+                            <constraint firstItem="5k6-W7-zIm" firstAttribute="centerY" secondItem="w0z-hk-oTZ" secondAttribute="centerY" constant="-160" id="ERZ-FM-RDE"/>
+                            <constraint firstItem="RTU-tS-ptt" firstAttribute="top" secondItem="uwb-3I-1fF" secondAttribute="top" id="Egh-b6-fNY"/>
+                            <constraint firstItem="8pL-9E-nbM" firstAttribute="centerX" secondItem="w0z-hk-oTZ" secondAttribute="centerX" constant="80" id="IEc-zN-XdQ"/>
+                            <constraint firstItem="dRP-T2-udk" firstAttribute="centerX" secondItem="w0z-hk-oTZ" secondAttribute="centerX" id="JfN-yh-NEV"/>
+                            <constraint firstItem="RTU-tS-ptt" firstAttribute="leading" secondItem="uwb-3I-1fF" secondAttribute="leading" id="Pvu-n2-YVd"/>
+                            <constraint firstItem="RTU-tS-ptt" firstAttribute="bottom" secondItem="uwb-3I-1fF" secondAttribute="bottom" id="cjv-ev-W4t"/>
+                            <constraint firstItem="rvq-1q-GKK" firstAttribute="centerX" secondItem="w0z-hk-oTZ" secondAttribute="centerX" id="dAs-VI-gLv"/>
+                            <constraint firstItem="AO1-bK-7fb" firstAttribute="centerX" secondItem="w0z-hk-oTZ" secondAttribute="centerX" constant="-80" id="dHo-rq-3HV"/>
+                            <constraint firstItem="5k6-W7-zIm" firstAttribute="centerX" secondItem="w0z-hk-oTZ" secondAttribute="centerX" id="g4v-jE-0Bk"/>
+                            <constraint firstItem="8pL-9E-nbM" firstAttribute="centerY" secondItem="w0z-hk-oTZ" secondAttribute="centerY" constant="120" id="gLK-9n-9yp"/>
+                            <constraint firstItem="RTU-tS-ptt" firstAttribute="trailing" secondItem="uwb-3I-1fF" secondAttribute="trailing" id="p7O-R8-dzU"/>
+                            <constraint firstItem="clh-If-Fcm" firstAttribute="centerY" secondItem="w0z-hk-oTZ" secondAttribute="centerY" constant="-40" id="qbo-6x-tH6"/>
+                            <constraint firstItem="dRP-T2-udk" firstAttribute="centerY" secondItem="w0z-hk-oTZ" secondAttribute="centerY" id="vvb-22-Ncb"/>
+                            <constraint firstItem="AO1-bK-7fb" firstAttribute="centerY" secondItem="w0z-hk-oTZ" secondAttribute="centerY" constant="120" id="vvp-6Z-F3u"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="uwb-3I-1fF"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="タイマー" image="glove" selectedImage="glove" id="F7W-X3-eRb" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
@@ -80,7 +120,7 @@
                     </userDefinedRuntimeAttributes>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="130" y="-548"/>
+            <point key="canvasLocation" x="176.80000000000001" y="-825.33733133433293"/>
         </scene>
         <!--Animated Tab Bar Controller-->
         <scene sceneID="TiF-lK-O1c">
@@ -104,5 +144,7 @@
     <resources>
         <image name="clock" width="32" height="32"/>
         <image name="glove" width="32" height="32"/>
+        <image name="play" width="128" height="128"/>
+        <image name="stop" width="128" height="128"/>
     </resources>
 </document>
