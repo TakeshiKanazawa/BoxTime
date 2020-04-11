@@ -49,8 +49,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5k6-W7-zIm">
-                                <rect key="frame" x="19.5" y="125" width="336" height="97"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5k6-W7-zIm">
+                                <rect key="frame" x="18.5" y="125" width="238" height="97"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="81"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -58,10 +58,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AO1-bK-7fb">
                                 <rect key="frame" x="43.5" y="389.5" width="128" height="128"/>
                                 <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="startTimeButton:" destination="V4z-Da-BYH" eventType="touchUpInside" id="geg-7E-DSe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pL-9E-nbM">
                                 <rect key="frame" x="203.5" y="389.5" width="128" height="128"/>
                                 <state key="normal" image="stop"/>
+                                <connections>
+                                    <action selector="stopTimeButton:" destination="V4z-Da-BYH" eventType="touchUpInside" id="Afi-qq-mGD"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRP-T2-udk">
                                 <rect key="frame" x="133" y="309.5" width="109.5" height="48"/>
@@ -73,6 +79,9 @@
                                 <rect key="frame" x="157.5" y="513" width="60" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetTimeButton:" destination="V4z-Da-BYH" eventType="touchUpInside" id="tid-4s-08C"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interval" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clh-If-Fcm">
                                 <rect key="frame" x="151" y="279.5" width="73" height="28"/>
@@ -80,12 +89,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZp-Ub-0U8">
+                                <rect key="frame" x="268.5" y="125" width="98.5" height="97"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="81"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="rvq-1q-GKK" firstAttribute="centerY" secondItem="w0z-hk-oTZ" secondAttribute="centerY" constant="200" id="3M0-On-jrO"/>
+                            <constraint firstItem="vZp-Ub-0U8" firstAttribute="centerX" secondItem="w0z-hk-oTZ" secondAttribute="centerX" constant="130" id="3ex-iR-MYJ"/>
                             <constraint firstItem="clh-If-Fcm" firstAttribute="centerX" secondItem="w0z-hk-oTZ" secondAttribute="centerX" id="4Gd-9Z-n5U"/>
-                            <constraint firstItem="5k6-W7-zIm" firstAttribute="centerY" secondItem="w0z-hk-oTZ" secondAttribute="centerY" constant="-160" id="ERZ-FM-RDE"/>
+                            <constraint firstItem="5k6-W7-zIm" firstAttribute="centerY" secondItem="w0z-hk-oTZ" secondAttribute="centerY" constant="-160" id="4bv-BJ-RBz"/>
+                            <constraint firstItem="vZp-Ub-0U8" firstAttribute="centerY" secondItem="w0z-hk-oTZ" secondAttribute="centerY" constant="-160" id="EKs-Xz-S6w"/>
                             <constraint firstItem="RTU-tS-ptt" firstAttribute="top" secondItem="uwb-3I-1fF" secondAttribute="top" id="Egh-b6-fNY"/>
                             <constraint firstItem="8pL-9E-nbM" firstAttribute="centerX" secondItem="w0z-hk-oTZ" secondAttribute="centerX" constant="80" id="IEc-zN-XdQ"/>
                             <constraint firstItem="dRP-T2-udk" firstAttribute="centerX" secondItem="w0z-hk-oTZ" secondAttribute="centerX" id="JfN-yh-NEV"/>
@@ -93,7 +110,7 @@
                             <constraint firstItem="RTU-tS-ptt" firstAttribute="bottom" secondItem="uwb-3I-1fF" secondAttribute="bottom" id="cjv-ev-W4t"/>
                             <constraint firstItem="rvq-1q-GKK" firstAttribute="centerX" secondItem="w0z-hk-oTZ" secondAttribute="centerX" id="dAs-VI-gLv"/>
                             <constraint firstItem="AO1-bK-7fb" firstAttribute="centerX" secondItem="w0z-hk-oTZ" secondAttribute="centerX" constant="-80" id="dHo-rq-3HV"/>
-                            <constraint firstItem="5k6-W7-zIm" firstAttribute="centerX" secondItem="w0z-hk-oTZ" secondAttribute="centerX" id="g4v-jE-0Bk"/>
+                            <constraint firstItem="5k6-W7-zIm" firstAttribute="centerX" secondItem="w0z-hk-oTZ" secondAttribute="centerX" constant="-50" id="efO-9i-ksH"/>
                             <constraint firstItem="8pL-9E-nbM" firstAttribute="centerY" secondItem="w0z-hk-oTZ" secondAttribute="centerY" constant="120" id="gLK-9n-9yp"/>
                             <constraint firstItem="RTU-tS-ptt" firstAttribute="trailing" secondItem="uwb-3I-1fF" secondAttribute="trailing" id="p7O-R8-dzU"/>
                             <constraint firstItem="clh-If-Fcm" firstAttribute="centerY" secondItem="w0z-hk-oTZ" secondAttribute="centerY" constant="-40" id="qbo-6x-tH6"/>
@@ -107,6 +124,14 @@
                             <outlet property="animation" destination="mdu-C6-dcj" id="d7G-EA-6yC"/>
                         </connections>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="intervalTimeLabel" destination="dRP-T2-udk" id="feW-Ih-ecn"/>
+                        <outlet property="millisecTimerLabel" destination="vZp-Ub-0U8" id="QZa-2E-fd7"/>
+                        <outlet property="resetTimeButton" destination="rvq-1q-GKK" id="UTV-Ux-BHb"/>
+                        <outlet property="startTimeButton" destination="AO1-bK-7fb" id="hBK-lI-kOw"/>
+                        <outlet property="stopTimeButton" destination="8pL-9E-nbM" id="pcP-Cc-poH"/>
+                        <outlet property="timerLabel" destination="5k6-W7-zIm" id="BOM-nq-vn9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eil-rX-zDT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <customObject id="mdu-C6-dcj" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController">
