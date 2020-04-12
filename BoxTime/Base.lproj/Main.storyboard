@@ -14,7 +14,60 @@
                     <view key="view" contentMode="scaleToFill" id="9eP-v3-ABI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイマー設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWM-sB-0FI">
+                                <rect key="frame" x="123.5" y="21" width="128.5" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイマー設定(インターバル)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bmd-fb-bxT">
+                                <rect key="frame" x="52.5" y="221" width="270.5" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V2w-iG-cts">
+                                <rect key="frame" x="0.0" y="67" width="375" height="130"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="27B-oo-OGK"/>
+                                    <constraint firstAttribute="width" constant="375" id="Dh9-Sd-G7v"/>
+                                </constraints>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhk-8T-lao">
+                                <rect key="frame" x="0.0" y="267" width="375" height="130"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="6Jd-Kd-gHk"/>
+                                    <constraint firstAttribute="height" constant="130" id="XqW-1T-78s"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="130" id="gwa-GM-5rh"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iva-ct-xOc">
+                                <rect key="frame" x="126" y="512.5" width="123" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="設定Button"/>
+                                <connections>
+                                    <action selector="setSettingButton:" destination="lL7-1g-emV" eventType="touchUpInside" id="IpE-pk-kTI"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hhk-8T-lao" firstAttribute="leading" secondItem="H7T-cs-pku" secondAttribute="leading" id="5H7-XA-Vqa"/>
+                            <constraint firstItem="EWM-sB-0FI" firstAttribute="centerY" secondItem="9eP-v3-ABI" secondAttribute="centerY" constant="-300" id="FWW-67-tIX"/>
+                            <constraint firstItem="V2w-iG-cts" firstAttribute="trailing" secondItem="H7T-cs-pku" secondAttribute="trailing" id="JyR-hb-Zcl"/>
+                            <constraint firstItem="Bmd-fb-bxT" firstAttribute="centerY" secondItem="9eP-v3-ABI" secondAttribute="centerY" constant="-100" id="KfY-4L-swW"/>
+                            <constraint firstItem="V2w-iG-cts" firstAttribute="leading" secondItem="H7T-cs-pku" secondAttribute="leading" id="Ltk-q1-MLR"/>
+                            <constraint firstItem="iva-ct-xOc" firstAttribute="centerY" secondItem="9eP-v3-ABI" secondAttribute="centerY" constant="200" id="NOG-0C-ggN"/>
+                            <constraint firstItem="EWM-sB-0FI" firstAttribute="centerX" secondItem="9eP-v3-ABI" secondAttribute="centerX" id="SNz-ce-4au"/>
+                            <constraint firstItem="V2w-iG-cts" firstAttribute="top" secondItem="EWM-sB-0FI" secondAttribute="bottom" constant="20" id="UYV-Qv-ClX"/>
+                            <constraint firstItem="Bmd-fb-bxT" firstAttribute="centerX" secondItem="9eP-v3-ABI" secondAttribute="centerX" id="VEK-BH-gxe"/>
+                            <constraint firstItem="hhk-8T-lao" firstAttribute="top" secondItem="Bmd-fb-bxT" secondAttribute="bottom" constant="20" id="oxo-Sc-OAl"/>
+                            <constraint firstItem="iva-ct-xOc" firstAttribute="centerX" secondItem="9eP-v3-ABI" secondAttribute="centerX" id="siV-PJ-E42"/>
+                            <constraint firstItem="hhk-8T-lao" firstAttribute="trailing" secondItem="H7T-cs-pku" secondAttribute="trailing" id="xUN-Gb-5dx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="H7T-cs-pku"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="セッティング" image="clock" id="d7T-jo-haW" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
@@ -22,6 +75,10 @@
                             <outlet property="animation" destination="pg9-TB-1j3" id="VoU-PT-goR"/>
                         </connections>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="settingIntervalPickerTime" destination="hhk-8T-lao" id="fkn-fi-Jb3"/>
+                        <outlet property="settingPickerTime" destination="V2w-iG-cts" id="1AM-5D-Vkx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mT4-3r-p4W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <customObject id="pg9-TB-1j3" customClass="RAMRightRotationAnimation" customModule="RAMAnimatedTabBarController">
@@ -35,7 +92,7 @@
                     </userDefinedRuntimeAttributes>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="177" y="-113"/>
+            <point key="canvasLocation" x="176.80000000000001" y="-113.79310344827587"/>
         </scene>
         <!--タイマー-->
         <scene sceneID="UIT-6C-nQn">
