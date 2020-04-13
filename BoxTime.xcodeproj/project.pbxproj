@@ -16,6 +16,9 @@
 		397AD8E624405DA6007F21E8 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397AD8E524405DA5007F21E8 /* SettingViewController.swift */; };
 		397AD8E92441CCF4007F21E8 /* gong_start.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 397AD8E72441CCF2007F21E8 /* gong_start.mp3 */; };
 		397AD8EA2441CCF5007F21E8 /* gong_finish.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 397AD8E82441CCF3007F21E8 /* gong_finish.mp3 */; };
+		39BF6A2824441613000D96EE /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BF6A2724441613000D96EE /* TestViewController.swift */; };
+		39BF6A37244429C8000D96EE /* fire.json in Resources */ = {isa = PBXBuildFile; fileRef = 39BF6A35244429C7000D96EE /* fire.json */; };
+		39BF6A38244429C8000D96EE /* move.json in Resources */ = {isa = PBXBuildFile; fileRef = 39BF6A36244429C8000D96EE /* move.json */; };
 		FD843CFD37F83CE4AE0F1D7B /* Pods_BoxTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72D014BAC982B28C2A264674 /* Pods_BoxTime.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +34,9 @@
 		397AD8E524405DA5007F21E8 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		397AD8E72441CCF2007F21E8 /* gong_start.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gong_start.mp3; sourceTree = "<group>"; };
 		397AD8E82441CCF3007F21E8 /* gong_finish.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gong_finish.mp3; sourceTree = "<group>"; };
+		39BF6A2724441613000D96EE /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		39BF6A35244429C7000D96EE /* fire.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fire.json; sourceTree = "<group>"; };
+		39BF6A36244429C8000D96EE /* move.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = move.json; sourceTree = "<group>"; };
 		72D014BAC982B28C2A264674 /* Pods_BoxTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoxTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6996B5D9A92B069F92A553 /* Pods-BoxTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoxTime.debug.xcconfig"; path = "Target Support Files/Pods-BoxTime/Pods-BoxTime.debug.xcconfig"; sourceTree = "<group>"; };
 		E3F5045F3B6D59C531E13759 /* Pods-BoxTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoxTime.release.xcconfig"; path = "Target Support Files/Pods-BoxTime/Pods-BoxTime.release.xcconfig"; sourceTree = "<group>"; };
@@ -76,9 +82,12 @@
 				397AD8E72441CCF2007F21E8 /* gong_start.mp3 */,
 				397AD8D5243DBCF0007F21E8 /* Main.storyboard */,
 				397AD8D8243DBCF5007F21E8 /* Assets.xcassets */,
+				39BF6A35244429C7000D96EE /* fire.json */,
+				39BF6A36244429C8000D96EE /* move.json */,
 				397AD8DA243DBCF5007F21E8 /* LaunchScreen.storyboard */,
 				397AD8DD243DBCF5007F21E8 /* Info.plist */,
 				397AD8E524405DA5007F21E8 /* SettingViewController.swift */,
+				39BF6A2724441613000D96EE /* TestViewController.swift */,
 			);
 			path = BoxTime;
 			sourceTree = "<group>";
@@ -163,7 +172,9 @@
 				397AD8E92441CCF4007F21E8 /* gong_start.mp3 in Resources */,
 				397AD8EA2441CCF5007F21E8 /* gong_finish.mp3 in Resources */,
 				397AD8DC243DBCF5007F21E8 /* LaunchScreen.storyboard in Resources */,
+				39BF6A37244429C8000D96EE /* fire.json in Resources */,
 				397AD8D9243DBCF5007F21E8 /* Assets.xcassets in Resources */,
+				39BF6A38244429C8000D96EE /* move.json in Resources */,
 				397AD8D7243DBCF0007F21E8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39BF6A2824441613000D96EE /* TestViewController.swift in Sources */,
 				397AD8D4243DBCF0007F21E8 /* ViewController.swift in Sources */,
 				397AD8D0243DBCF0007F21E8 /* AppDelegate.swift in Sources */,
 				397AD8D2243DBCF0007F21E8 /* SceneDelegate.swift in Sources */,
@@ -368,6 +380,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UN8UZKY2BZ;
 				INFOPLIST_FILE = BoxTime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -375,7 +388,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.hotmail.oseans.BoxTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -387,6 +400,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UN8UZKY2BZ;
 				INFOPLIST_FILE = BoxTime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -394,7 +408,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.hotmail.oseans.BoxTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

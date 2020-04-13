@@ -1,16 +1,20 @@
 PODS:
+  - lottie-ios (3.1.6)
   - RAMAnimatedTabBarController (5.1.0)
 
 DEPENDENCIES:
+  - lottie-ios
   - RAMAnimatedTabBarController
 
 SPEC REPOS:
   trunk:
+    - lottie-ios
     - RAMAnimatedTabBarController
 
 SPEC CHECKSUMS:
+  lottie-ios: 85ce835dd8c53e02509f20729fc7d6a4e6645a0a
   RAMAnimatedTabBarController: b5c821298071fded801532216ad8a24394f89859
 
-PODFILE CHECKSUM: 02a3dc2bd57572dcc88043467c7c33c23af40c32
+PODFILE CHECKSUM: b3d494ebb75a08c48d56aff61ce5acb82c0e4e89
 
 COCOAPODS: 1.9.1

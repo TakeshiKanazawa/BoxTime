@@ -8,9 +8,11 @@
 
 import UIKit
 import AVFoundation
+import Lottie
 
 class ViewController: UIViewController {
 
+    @IBOutlet  var animationView: AnimationView!
     //Timerクラスのインスタンス化
     var timer = Timer()
     //Timerクラスのインスタンス化
@@ -37,6 +39,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let animationView = AnimationView()
+        let animataion = Animation.named("flame_animation")
+        animationView.animation = animataion
+        animationView.play()
+        startFrameAnimation()
+        
         //User Defaults Instance
         let userDefaults = UserDefaults.standard
         //Get propaty From UD
@@ -78,23 +86,29 @@ class ViewController: UIViewController {
 
         //インターバルタイマー表示設定
         //表示用の　分　秒　ミリ秒
-        let minutesforIntervalString = minutesforInterval > 9 ? "\(minutesforInterval)" : "0\(minutesforInterval)"
+        //let minutesforIntervalString = minutesforInterval > 9 ? "\(minutesforInterval)" : "0\(minutesforInterval)"
         let secondsforIntervalString = secondsforInterval > 9 ? "\(secondsforInterval)" : "0\(secondsforInterval)"
 
         //カウントダウン時刻表示
-        intervalTimeLabel.text = "\(minutesforIntervalString):\(secondsforIntervalString)"
+        intervalTimeLabel.text = "\(secondsforIntervalString)"
         
+    }
+    
+    func startFrameAnimation() {
+        animationView = AnimationView(name: "flame_animation")
     }
 
     @IBAction func startTimeButton(_ sender: Any) {
+                //sound flag true
         
-        //ゴングの音を鳴らす
+        //flagがtrueならゴングの音を鳴らす
         do{
           soundPlay = try AVAudioPlayer(contentsOf: soundFile1) // soundFileを参照
           soundPlay.play()
         }catch{
           print("sound error")
         }
+
         //設定したタイマーをカウントダウンさせる処理
         timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(ViewController.setTimer), userInfo: nil, repeats: true)
         //Startボタン&resetボタンロック
@@ -132,17 +146,15 @@ class ViewController: UIViewController {
               } else {
                   milliseconds = 0
               }
-              
               if let UDKeyminutesforInterval = userDefaults.object(forKey: "UDKeyminutesforInterval") {
                    minutesforInterval = UDKeyminutesforInterval as! Int
               } else {
-                  minutesforInterval = 1
+                  minutesforInterval = 0
               }
-              
               if let UDKeysecondsforInterval = userDefaults.object(forKey: "UDKeysecondsforInterval") {
                    secondsforInterval = UDKeysecondsforInterval as! Int
               } else {
-                  secondsforInterval  = 0
+                  secondsforInterval  = 60
               }
         viewDidLoad()
 
@@ -195,13 +207,13 @@ class ViewController: UIViewController {
             if let UDKeyminutesforInterval = userDefaults.object(forKey: "UDKeyminutesforInterval") {
                  minutesforInterval = UDKeyminutesforInterval as! Int
             } else {
-                minutesforInterval = 1
+                minutesforInterval = 0
             }
             
             if let UDKeysecondsforInterval = userDefaults.object(forKey: "UDKeysecondsforInterval") {
                  secondsforInterval = UDKeysecondsforInterval as! Int
             } else {
-                secondsforInterval  = 0
+                secondsforInterval  = 60
             }
             //設定したタイマーをカウントダウンさせる処理
                  intervalTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.setIntervalTimer), userInfo: nil, repeats: true)
@@ -284,10 +296,8 @@ class ViewController: UIViewController {
         //表示用の　分　秒　ミリ秒
         let minutesforIntervalString = minutesforInterval > 9 ? "\(minutesforInterval)" : "0\(minutesforInterval)"
         let secondsforIntervalString = secondsforInterval > 9 ? "\(secondsforInterval)" : "0\(secondsforInterval)"
-
         //カウントダウン時刻表示
-        
-        intervalTimeLabel.text = "\(minutesforIntervalString):\(secondsforIntervalString):"
+        intervalTimeLabel.text = "\(secondsforIntervalString)"
 
     }
 
